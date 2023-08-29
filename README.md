@@ -44,7 +44,9 @@ The full list of subcommands is:
                 your repositories.
 - `diff`    - Which shows in repositories that have changes.
 - `reset`   - Which resets all repositories to the state of their remotes.
-                one step. (*note: this works well with issue-based naming schemes)
+    one step.
+
+    *(\*note: this works well with issue-based naming schemes)*
 
 Planned:
 
@@ -53,3 +55,26 @@ Planned:
 - `branch`  - Which shows and allows changing branches across repositories as
 - `stash`   - Which stashes all repositories.
 - `commit`  - Which allows committing across repositories as one step.
+
+### Global Options
+
+- `-u / --show-untracked`
+
+    Show untracked files in the status output, which are hidden by default.
+
+- `-d / --working-dir`
+
+    Set the working directory to use. Defaults to the current directory.    This is where Rack will look for repositories.
+
+- `-r / --repo`
+
+    Manually specify one or more repositories to operate on.
+
+- `-C / --changed`
+
+    Filter the list of repositories to only those with changes.
+
+- `-n / --next`
+
+    Focus on the next repository with changes only.
+
