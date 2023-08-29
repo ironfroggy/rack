@@ -1,0 +1,10 @@
+[project]
+name = "rack"
+version = "0.0.1"
+
+dependencies = [
+    
+]
+
+[project.scripts]
+rack = "rack:main"
