@@ -13,10 +13,10 @@ you have the time and inclination.
 
 ## Installation
 
-Simply install with pip. There is no packaging for now.
+Simply install with pip directly from this repository.
 
 ```shell
-pip install .
+pip install -e .
 ```
 
 ## Usage
@@ -78,3 +78,46 @@ Planned:
 
     Focus on the next repository with changes only.
 
+- `-v / --verbose`
+
+    Show more information in the output. Can be repeated for increasing levels of verbosity. Currently will accept any number of `-v` flags but no verbose output beyond Level 3 is produced.
+
+- `-D / --die-and-debug`
+
+    Upon errors, including some which may have been recoverable, drop into a debugger and terminate afterwards.
+
+### Subcommands and Options
+
+#### Listing Projects
+
+```shell
+rack list
+```
+
+This command will list all the projects in the working directory. It will
+show just the name of the project by default, but can include other useful
+information and filter the list in various ways.
+
+- `-h, --help`
+
+    Show this help message and exit.
+
+- `-s, --status`
+
+    Show the git status of repos. **(\*note: this can be slower)**
+
+- `-u, --show-untracked`
+
+    Show when repositories have untracked files.
+
+- `-R, --show-remotes`
+
+    Show the remotes of the repositories.
+
+- `-N, --non-repos`
+
+    Include non-repos in the list. Incompatible with `-O / --only-non-repos`.
+
+- `-O, --only-non-repos`
+
+    Include *only* non-repos in the list. Incompatible with `-N / --non-repos`.
